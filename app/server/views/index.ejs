@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html <%- metaHeader.htmlAttributes.toString() %>>
+  <head>
+
+      <!-- Bootstrap Core CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/assets/css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="/assets/css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- jQuery -->
+    <script src="/assets/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="/assets/js/plugins/morris/raphael.min.js"></script>
+    <script src="/assets/js/plugins/morris/morris.min.js"></script>
+    <script src="/assets/js/plugins/morris/morris-data.js"></script>
+
+    <link rel="stylesheet" href="<%= styleSrc %>" type="text/css" media="screen" charset="utf-8">
+    <%- metaHeader.title.toString() %>
+    <%- metaHeader.base.toString() %>
+    <%- metaHeader.meta.toString() %>
+    <%- metaHeader.link.toString() %>
+    <%- metaHeader.script.toString() %>
+    <%- metaHeader.style.toString() %>
+  </head>
+  <body>
+    <div id="root"><%- html %></div>
+    <script type="text/javascript" charset="utf-8">
+      window.__REDUX_STATE__ = '<%= reduxState %>';
+    </script>
+
+    <% scriptSrcs.forEach(function(src){ %>
+      <script src="<%= src %>"></script>
+    <% }) %>
+
+  </body>
+</html>
